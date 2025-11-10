@@ -1,14 +1,7 @@
-# Description of Work (10 points)
-
-This is new for Project 1. We ask you to include a file called `README.md` that contains a quick description of:
-
-1. the design choices you made,
-2. any problems you encountered while creating your solution, and
-3. your solutions to those problems.
-
-This is not meant to be comprehensive; less than 300 words will suffice.
-
 ## Description of Work
+
+## Summary:
+This project demonsrates a TCP connectiona and implements it
 
 **Design choices.** The transport module now keeps distinct paths for data and pure ACK generation while preserving a sliding-window protocol. Send and receive queues remain linked lists so selective retransmissions and late in-order delivery are straightforward. Timers are single-shot and tied to the oldest outstanding segment, but duplicate-ACK triggers allow a fast retransmit of the base packet. Sequence numbers advance per segment to stay compatible with the provided harness.
 
