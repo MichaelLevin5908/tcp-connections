@@ -1,6 +1,6 @@
 ## Description of Work
 
-## Summary:
+**Summary.**
 This project demonsrates a TCP connectiona and implements it
 
 **Design choices.** The transport module now keeps distinct paths for data and pure ACK generation while preserving a sliding-window protocol. Send and receive queues remain linked lists so selective retransmissions and late in-order delivery are straightforward. Timers are single-shot and tied to the oldest outstanding segment, but duplicate-ACK triggers allow a fast retransmit of the base packet. Sequence numbers advance per segment to stay compatible with the provided harness.
